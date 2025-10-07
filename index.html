@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Survival - Dodge the Flying Objects!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-display">
+                <span>Score: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="health-display">
+                <span>Lives: </span>
+                <div class="hearts">
+                    <span class="heart">❤️</span>
+                    <span class="heart">❤️</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        
+        <div class="game-controls">
+            <div class="instructions">
+                <h3>Controls:</h3>
+                <p>← → or A D - Move</p>
+                <p>Spacebar or ↑ - Jump</p>
+                <p>↓ or S - Crouch</p>
+                <p>P - Pause/Resume</p>
+                <p>R - Restart (when game over)</p>
+            </div>
+        </div>
+        
+        <div id="gameOverScreen" class="game-over hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <p>High Score: <span id="highScore">0</span></p>
+            <button id="restartBtn">Play Again</button>
+        </div>
+        
+        <div id="startScreen" class="start-screen">
+            <h1>🎒 School Survival</h1>
+            <p>Dodge the flying objects in the school hallway!</p>
+            <p>Jump on tables to avoid obstacles!</p>
+            <button id="startBtn">Start Game</button>
+        </div>
+    </div>
+    
+    <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/obstacles.js"></script>
+    <script src="js/platforms.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
